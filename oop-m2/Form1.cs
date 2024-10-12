@@ -83,5 +83,11 @@ namespace oop_m2
         }
 
         private void button2_Click(object sender, EventArgs e) => Application.Exit();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+            Hide();
+        }
     }
 }
