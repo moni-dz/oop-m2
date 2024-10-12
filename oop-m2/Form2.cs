@@ -17,11 +17,6 @@ namespace oop_m2
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             new Form3().Show();
