@@ -49,5 +49,10 @@ namespace oop_m2
             new Form2().Show();
             Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
