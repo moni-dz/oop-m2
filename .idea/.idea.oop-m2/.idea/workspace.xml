@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8feef18c-9a7f-475f-bfd8-81ea4756120d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/oop-m2/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oop-m2/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oop-m2/oop-m2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/oop-m2/oop-m2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop-m2/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oop-m2/Form1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/moni-dz/oop-m2.git",
+    "accountId": "85d1197e-cc69-4f11-aacb-7a086318b735"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -25,14 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="oop-m2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
