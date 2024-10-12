@@ -70,6 +70,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "★ BUY TICKETS★";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -100,6 +101,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "EXIT";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 

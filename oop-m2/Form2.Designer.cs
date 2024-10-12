@@ -98,7 +98,6 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "movie:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGridView2
             // 
@@ -141,7 +140,6 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "schedule:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
@@ -155,6 +153,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "★ PROCEED ★";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox2
             // 
@@ -195,7 +194,6 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "MONDAY - 05 ★ 25 ★ 2024";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form2
             // 
@@ -218,7 +216,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
             this.Text = "CloverPass";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
