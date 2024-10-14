@@ -32,5 +32,11 @@ namespace oop_m2
             new Form4().Show();
             Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+            Hide();
+        }
     }
 }
