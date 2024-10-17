@@ -29,115 +29,118 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMovie = new System.Windows.Forms.TextBox();
+            this.txtDateTime = new System.Windows.Forms.TextBox();
+            this.txtSeat = new System.Windows.Forms.TextBox();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.txtTicketMovie = new System.Windows.Forms.TextBox();
+            this.txtTicketTime = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtTicketDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtMovie
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Smiley Sans Oblique", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox1.Location = new System.Drawing.Point(130, 259);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 33);
-            this.textBox1.TabIndex = 132;
-            this.textBox1.Text = "movie name";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMovie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMovie.Enabled = false;
+            this.txtMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
+            this.txtMovie.Location = new System.Drawing.Point(173, 319);
+            this.txtMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMovie.Name = "txtMovie";
+            this.txtMovie.Size = new System.Drawing.Size(469, 37);
+            this.txtMovie.TabIndex = 132;
+            this.txtMovie.Text = "movie name";
+            this.txtMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMovie.TextChanged += new System.EventHandler(this.txtMovie_TextChanged);
             // 
-            // textBox2
+            // txtDateTime
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Smiley Sans Oblique", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox2.Location = new System.Drawing.Point(130, 311);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(352, 33);
-            this.textBox2.TabIndex = 133;
-            this.textBox2.Text = "date, schedule";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDateTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDateTime.Enabled = false;
+            this.txtDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
+            this.txtDateTime.Location = new System.Drawing.Point(173, 383);
+            this.txtDateTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDateTime.Name = "txtDateTime";
+            this.txtDateTime.Size = new System.Drawing.Size(469, 37);
+            this.txtDateTime.TabIndex = 133;
+            this.txtDateTime.Text = "date, schedule";
+            this.txtDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDateTime.TextChanged += new System.EventHandler(this.txtDateTime_TextChanged);
             // 
-            // textBox3
+            // txtSeat
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Smiley Sans Oblique", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox3.Location = new System.Drawing.Point(130, 376);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(352, 33);
-            this.textBox3.TabIndex = 134;
-            this.textBox3.Text = "seat number";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSeat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSeat.Enabled = false;
+            this.txtSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
+            this.txtSeat.Location = new System.Drawing.Point(173, 463);
+            this.txtSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSeat.Name = "txtSeat";
+            this.txtSeat.Size = new System.Drawing.Size(469, 37);
+            this.txtSeat.TabIndex = 134;
+            this.txtSeat.Text = "seat number";
+            this.txtSeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSeat.TextChanged += new System.EventHandler(this.txtSeat_TextChanged);
             // 
-            // label4
+            // labelCost
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Smiley Sans Oblique", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(185)))), ((int)(((byte)(151)))));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(200, 453);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(208, 60);
-            this.label4.TabIndex = 140;
-            this.label4.Text = "total cost";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCost.BackColor = System.Drawing.Color.White;
+            this.labelCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelCost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(185)))), ((int)(((byte)(151)))));
+            this.labelCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCost.Location = new System.Drawing.Point(267, 558);
+            this.labelCost.Name = "labelCost";
+            this.labelCost.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelCost.Size = new System.Drawing.Size(277, 73);
+            this.labelCost.TabIndex = 140;
+            this.labelCost.Text = "total cost";
+            this.labelCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // txtTicketMovie
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Smiley Sans Oblique", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox4.Location = new System.Drawing.Point(716, 326);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 18);
-            this.textBox4.TabIndex = 141;
-            this.textBox4.Text = "movie name";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTicketMovie.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTicketMovie.Enabled = false;
+            this.txtTicketMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTicketMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
+            this.txtTicketMovie.Location = new System.Drawing.Point(955, 401);
+            this.txtTicketMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTicketMovie.Name = "txtTicketMovie";
+            this.txtTicketMovie.Size = new System.Drawing.Size(176, 21);
+            this.txtTicketMovie.TabIndex = 141;
+            this.txtTicketMovie.Text = "movie name";
+            this.txtTicketMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTicketMovie.TextChanged += new System.EventHandler(this.txtTicketMovie_TextChanged);
             // 
-            // textBox5
+            // txtTicketTime
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Smiley Sans Oblique", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox5.Location = new System.Drawing.Point(716, 349);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 18);
-            this.textBox5.TabIndex = 142;
-            this.textBox5.Text = "schedule";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTicketTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTicketTime.Enabled = false;
+            this.txtTicketTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTicketTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
+            this.txtTicketTime.Location = new System.Drawing.Point(955, 430);
+            this.txtTicketTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTicketTime.Name = "txtTicketTime";
+            this.txtTicketTime.Size = new System.Drawing.Size(176, 21);
+            this.txtTicketTime.TabIndex = 142;
+            this.txtTicketTime.Text = "schedule";
+            this.txtTicketTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTicketTime.TextChanged += new System.EventHandler(this.txtTicketDateTime_TextChanged);
             // 
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Smiley Sans Oblique", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(212)))), ((int)(((byte)(169)))));
-            this.textBox6.Location = new System.Drawing.Point(716, 372);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Location = new System.Drawing.Point(955, 458);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 18);
+            this.textBox6.Size = new System.Drawing.Size(176, 21);
             this.textBox6.TabIndex = 143;
             this.textBox6.Text = "seat number";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -146,53 +149,52 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Smiley Sans Oblique", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(185)))), ((int)(((byte)(151)))));
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(66, 618);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(88, 761);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(480, 27);
+            this.label3.Size = new System.Drawing.Size(640, 33);
             this.label3.TabIndex = 144;
             this.label3.Text = " ★ just show your digital ticket for admission! ★";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox7
+            // txtTicketDate
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(218)))), ((int)(((byte)(221)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Smiley Sans Oblique", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
-            this.textBox7.Location = new System.Drawing.Point(732, 279);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(98, 18);
-            this.textBox7.TabIndex = 145;
-            this.textBox7.Text = "sample date";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtTicketDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(218)))), ((int)(((byte)(221)))));
+            this.txtTicketDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTicketDate.Enabled = false;
+            this.txtTicketDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTicketDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
+            this.txtTicketDate.Location = new System.Drawing.Point(976, 343);
+            this.txtTicketDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTicketDate.Name = "txtTicketDate";
+            this.txtTicketDate.Size = new System.Drawing.Size(131, 21);
+            this.txtTicketDate.TabIndex = 145;
+            this.txtTicketDate.Text = "sample date";
+            this.txtTicketDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTicketDate.TextChanged += new System.EventHandler(this.txtTicketDate_TextChanged);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(952, 778);
-            this.Controls.Add(this.textBox7);
+            this.ClientSize = new System.Drawing.Size(1269, 958);
+            this.Controls.Add(this.txtTicketDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTicketTime);
+            this.Controls.Add(this.txtTicketMovie);
+            this.Controls.Add(this.labelCost);
+            this.Controls.Add(this.txtSeat);
+            this.Controls.Add(this.txtDateTime);
+            this.Controls.Add(this.txtMovie);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CloverPass";
@@ -204,14 +206,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMovie;
+        private System.Windows.Forms.TextBox txtDateTime;
+        private System.Windows.Forms.TextBox txtSeat;
+        private System.Windows.Forms.Label labelCost;
+        private System.Windows.Forms.TextBox txtTicketMovie;
+        private System.Windows.Forms.TextBox txtTicketTime;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtTicketDate;
     }
 }

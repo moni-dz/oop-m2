@@ -12,12 +12,24 @@ namespace oop_m2
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        public Form4(string movie, string date, string time)
         {
             InitializeComponent();
+
+            txtMovie.Text = movie;
+            txtDateTime.Text = $"{date} / {time}";
+
+            txtTicketMovie.Text = movie;
+            txtTicketTime.Text = time;
+
+            txtTicketDate.Text = date;  
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public Form4()
+        {
+        }
+
+        private void txtMovie_TextChanged(object sender, EventArgs e)
         {
             
         }
@@ -27,7 +39,26 @@ namespace oop_m2
 
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void txtTicketDate_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtDateTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSeat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTicketMovie_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTicketDateTime_TextChanged(object sender, EventArgs e)
         {
 
         }
