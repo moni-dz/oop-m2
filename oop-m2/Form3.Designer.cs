@@ -388,6 +388,7 @@
             this.f3.Name = "f3";
             this.f3.Size = new System.Drawing.Size(6, 6);
             this.f3.TabIndex = 159;
+            this.f3.ThreeState = true;
             this.f3.UseVisualStyleBackColor = true;
             // 
             // e2
@@ -1059,6 +1060,7 @@
             this.f14.Name = "f14";
             this.f14.Size = new System.Drawing.Size(6, 6);
             this.f14.TabIndex = 251;
+            this.f14.ThreeState = true;
             this.f14.UseVisualStyleBackColor = true;
             // 
             // f13
@@ -1589,6 +1591,7 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CloverPass";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
