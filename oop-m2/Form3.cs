@@ -23,6 +23,8 @@ namespace oop_m2
         private BitArray aSeatsMod, bSeatsMod, cSeatsMod, dSeatsMod, eSeatsMod, fSeatsMod;
         private CheckBox[] aRow, bRow, cRow, dRow, eRow, fRow;
         private const int seatCost = 150;
+        private bool firstTimeChecked = true;
+        private int totalCost = 0;
 
         private int BitArrayToInt(BitArray a)
         {
@@ -33,6 +35,28 @@ namespace oop_m2
 
         public Form3(string movie, string date, string time)
         {
+            var conn = DatabaseConnection.Instance.Connection;
+            const string seatsQuery =
+                "select a_seats, b_seats, c_seats, d_seats, e_seats, f_seats from Movies where name=@1 and time=@2 and date=@3";
+            var command = new SqlCommand(seatsQuery, conn);
+            command.Parameters.AddWithValue("@1", movie);
+            command.Parameters.AddWithValue("@2", time);
+            command.Parameters.AddWithValue("@3", date);
+            
+            using (var reader = command.ExecuteReader())
+            {
+                Console.WriteLine(reader.HasRows);
+                while (reader.Read())
+                {
+                    aSeats = new BitArray(new []{ int.Parse(reader["a_seats"].ToString()) });
+                    bSeats = new BitArray(new []{ int.Parse(reader["b_seats"].ToString()) });
+                    cSeats = new BitArray(new []{ int.Parse(reader["c_seats"].ToString()) });
+                    dSeats = new BitArray(new []{ int.Parse(reader["d_seats"].ToString()) });
+                    eSeats = new BitArray(new []{ int.Parse(reader["e_seats"].ToString()) });
+                    fSeats = new BitArray(new []{ int.Parse(reader["f_seats"].ToString()) });
+                }
+            }
+            
             InitializeComponent();
             
             selectedMovie = movie;
@@ -45,12 +69,12 @@ namespace oop_m2
             eRow = new[] { e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16, e17, e18 };
             fRow = new[] { f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18 };
 
-            aSeatsMod = new BitArray(18);
-            bSeatsMod = new BitArray(18);
-            cSeatsMod = new BitArray(18);
-            dSeatsMod = new BitArray(18);
-            eSeatsMod = new BitArray(18);
-            fSeatsMod = new BitArray(18);
+            aSeatsMod = new BitArray(new[] { 0 });
+            bSeatsMod = new BitArray(new[] { 0 });
+            cSeatsMod = new BitArray(new[] { 0 });
+            dSeatsMod = new BitArray(new[] { 0 });
+            eSeatsMod = new BitArray(new[] { 0 });
+            fSeatsMod = new BitArray(new[] { 0 });
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +87,7 @@ namespace oop_m2
             var fCombined = BitArrayToInt(fSeats.Or(fSeatsMod));
 
             var conn = DatabaseConnection.Instance.Connection;
-            const string updateQuery = "update Movies set a_seats=@1, b_seats=@2, c_seats=@3, d_seats=@4, e_seats@=@5, f_seats=@6 where name=@7, time=@8, date=@9";
+            const string updateQuery = "update Movies set a_seats=@1, b_seats=@2, c_seats=@3, d_seats=@4, e_seats=@5, f_seats=@6 where name=@7 and time=@8 and date=@9";
             var command = new SqlCommand(updateQuery, conn);
             command.Parameters.AddWithValue("@1", aCombined);
             command.Parameters.AddWithValue("@2", bCombined);
@@ -76,7 +100,7 @@ namespace oop_m2
             command.Parameters.AddWithValue("@9", selectedDate);
             command.ExecuteNonQuery();
             
-            var form4 = new Form4(selectedMovie, selectedDate, selectedTime);
+            var form4 = new Form4(selectedMovie, selectedDate, selectedTime, textBox1.Text, totalCost);
             form4.Show();
             Hide();
         }
@@ -90,6 +114,11 @@ namespace oop_m2
         private void Seats_OnCheckedChanged(object sender, EventArgs e)
         {
             if (!(sender is CheckBox cBox)) return;
+            if (firstTimeChecked)
+            {
+                textBox1.Clear();
+                firstTimeChecked = !firstTimeChecked;
+            }
             
             var aIdx = Array.IndexOf(aRow, cBox);
             var bIdx = Array.IndexOf(bRow, cBox);
@@ -134,31 +163,11 @@ namespace oop_m2
             
             textBox2.Text = totalCount.ToString();
             label4.Text = $@"{totalCount * seatCost}";
+            totalCost = totalCount * seatCost;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            var conn = DatabaseConnection.Instance.Connection;
-            const string seatsQuery =
-                "select a_seats, b_seats, c_seats, d_seats, e_seats from Movies where name=@1, time=@2, date=@3";
-            var command = new SqlCommand(seatsQuery, conn);
-            command.Parameters.AddWithValue("@1", selectedMovie);
-            command.Parameters.AddWithValue("@2", selectedDate);
-            command.Parameters.AddWithValue("@3", selectedTime);
-
-            using (var sda = new SqlDataAdapter(command))
-            using (var dt = new DataTable())
-            {
-                sda.Fill(dt);
-                int SeatDataFor(string seats) => dt.AsEnumerable().Select(row => row.Field<int>(seats)).ToArray()[0];
-                aSeats = new BitArray(new []{ SeatDataFor("a_seats") });
-                bSeats = new BitArray(new []{ SeatDataFor("b_seats") });
-                cSeats = new BitArray(new []{ SeatDataFor("c_seats") });
-                dSeats = new BitArray(new []{ SeatDataFor("d_seats") });
-                eSeats = new BitArray(new []{ SeatDataFor("e_seats") });
-                fSeats = new BitArray(new []{ SeatDataFor("f_seats") });
-            }
-
             for (var i = 0; i < 18; i++)
             {
                 aRow[i].CheckState = aSeats[i] ? CheckState.Checked : CheckState.Unchecked;

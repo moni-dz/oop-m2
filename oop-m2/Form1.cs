@@ -19,8 +19,8 @@ namespace oop_m2
         private void Form1_Load(object sender, EventArgs e)
         {
             var conn = DatabaseConnection.Instance.Connection;
-            const string firstSchedQuery = "select name, time from Movies where date='2024-05-15'";
-            const string secondSchedQuery = "select name, time from Movies where date='2024-05-25'";
+            const string firstSchedQuery = "select name, time from Movies where date='2024-05-05'";
+            const string secondSchedQuery = "select name, time from Movies where date='2024-05-15'";
 
             using (var sda = new SqlDataAdapter(firstSchedQuery, conn))
             using (var dt = new DataTable())

@@ -12,7 +12,7 @@ namespace oop_m2
 {
     public partial class Form4 : Form
     {
-        public Form4(string movie, string date, string time)
+        public Form4(string movie, string date, string time, string seats, int cost)
         {
             InitializeComponent();
 
@@ -22,7 +22,10 @@ namespace oop_m2
             txtTicketMovie.Text = movie;
             txtTicketTime.Text = time;
 
-            txtTicketDate.Text = date;  
+            txtTicketDate.Text = date;
+            txtSeat.Text = seats;
+            textBox6.Text = seats;
+            labelCost.Text = cost.ToString();
         }
 
         public Form4()
